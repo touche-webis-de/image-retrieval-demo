@@ -1,6 +1,0 @@
-.content.index .search {
-  height: 100%;
-}
-.content.index .search-bar {
-  margin-top: calc(var(--spacing) * 2);
-}
