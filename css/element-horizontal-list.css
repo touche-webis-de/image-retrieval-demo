@@ -1,0 +1,12 @@
+.horizontal-list {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 0px;
+  list-style: none;
+  margin-bottom: calc( var(--spacing) / 2 );
+}
+
+.horizontal-list > * {
+  display: inline;
+  margin-right: var(--spacing);
+}

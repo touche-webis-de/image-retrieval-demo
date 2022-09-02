@@ -1,0 +1,78 @@
+.excerpt:not([data-open]) .fulltext span,
+.excerpt:not([data-open]) .conclusion {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+.excerpt:not([data-open]) .fulltext:not(:first-child)::before {
+  content: '\2026';
+  padding-left: 3px;
+  padding-right: 3px;
+  cursor: pointer;
+  color: var(--c-grey-dark);
+}
+.excerpt:not([data-open]) .fulltext:hover::before {
+  color: var(--c-action);
+}
+
+.excerpt[data-open] .fulltext span,
+.excerpt[data-open] .conclusion {
+  color: #555;
+}
+
+.excerpt .control-area {
+  position: relative;
+  display: inline-block;
+}
+.excerpt .control-area.disabled {
+  display: none;
+}
+
+.excerpt .expand-button {
+  width: 100%;
+  color: var(--c-grey-dark);
+}
+.excerpt .expand-button:hover {
+  color: var(--c-action);
+}
+
+.excerpt .expand-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.excerpt .expand-button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+
+.excerpt .expand-button .icon {
+  margin-right: 6px;
+  transform: rotateZ(0);
+}
+
+.excerpt .expand-button[aria-expanded="true"] .icon {
+  transform: rotateZ(90deg);
+}
+
+.excerpt .expand-button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.excerpt p:last-child {
+  margin-bottom: 0;
+}
+
+.pro.argument .excerpt .conclusion::before {
+  content: "Supports: ";
+}
+.con.argument .excerpt .conclusion::before {
+  content: "Attacks: ";
+}
+

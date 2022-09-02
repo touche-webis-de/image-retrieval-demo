@@ -1,0 +1,10 @@
+.argument .image {
+  max-height: 150px;
+  overflow: hidden;
+  float: left;
+  margin-right: var(--spacing);
+  border-radius: 5%;
+}
+.argument .image img {
+  max-width: 100px;
+}

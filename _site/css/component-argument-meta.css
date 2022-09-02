@@ -1,0 +1,16 @@
+.argument-meta {
+  color: var(--c-grey-dark);
+  font-size: 0.9em;
+}
+
+.argument-meta a:hover {
+  color: var(--c-action);
+}
+
+.argument-meta.horizontal-list > * {
+  margin-right: calc( var(--spacing) * 1 );
+}
+
+.argument-meta .dropdown {
+  display: inline;
+}

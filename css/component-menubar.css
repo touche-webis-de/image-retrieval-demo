@@ -1,0 +1,62 @@
+.menubar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--c-grey-dark);
+  font-size: 0.9em;
+}
+
+.menubar .filters {
+  position: relative;
+  margin-top: 4px;
+}
+.menubar .result-meta {
+  display: inline-block;
+}
+
+.menubar .dropdown .dropdown-content {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.menubar .menu {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.menubar .menu.unfolded {
+  display: block;
+  margin-bottom: 4px;
+}
+.menubar .menu.unfolded li {
+  display: inline-block;
+  margin-right: var(--spacing);
+}
+
+.menubar .menu:not(.unfolded) li > * {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+}
+
+.menubar .menu .check {
+  width: 1em;
+  height: 1em;
+  margin: 0px var(--spacing);
+  vertical-align: middle;
+}
+
+.menubar .menu .selected {
+  color: var(--c-action);
+}
+.menubar .menu .selected span {
+  font-weight: bold;
+}
+
+.menubar .menu a {
+  color: var(--c-grey-dark);
+}
+.menubar .menu a:hover {
+  color: var(--c-action);
+}

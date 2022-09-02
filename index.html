@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>images.args.me</title>
+      <link rel="stylesheet" href="css/lightbox.css">
+      <link rel="stylesheet" href="css/args.css">
+      <link rel="stylesheet" href="css/image-search.css">
+      <script src="js/lightbox-plus-jquery.js"></script>
+      <link rel="icon" href="images/args-logo.png">
+   </head>
+   <body>
+      <header class="site-head">
+         <div class="search responsive"><a href="/index.html" class="logo"><svg xmlns="http://www.w3.org/2000/svg" aria-labelledby="args-icon-title" width="32" height="32" viewBox="0 0 32 32" class="icon">
+            <title id="args-icon-title">The args.me icon. A parrot composed of right-angled pie shapes</title>
+            <path d="M0 16c1 15 15 16 32 16-2-15-14-16-29-16z" fill="#208235"></path>
+            <path d="M16 0C7 0 0 7 0 16h3C3 9 9 3 16 3z" fill="#8ec63f"></path>
+            <path d="M16 0v16h16c0-8.85-7.15-16-16-16z" fill="#bd1319"></path>
+            <circle cx="9.85" cy="8.35" r="1.85"></circle></svg><h1>args</h1></a><select name="topic" onchange="updateResults();">
+              <option value="nothing" selected>Select a topic</option>
+              <option value="33">Should people become vegetarian?</option>
+              <option value="8">Should abortion be legal?</option>
+              <option value="1">Should teachers get tenure?</option>
+              <option value="2">Is vaping with e-cigarettes safe?</option>
+              <option value="3">Should insider trading be allowed?</option>
+              <option value="4">Should corporal punishment be used in schools?</option>
+              <option value="5">Should social security be privatized?</option>
+              <option value="6">Is a college education worth it?</option>
+              <option value="7">Should felons who have completed their sentence be allowed to vote?</option>
+              <option value="9">Should students have to wear school uniforms?</option>
+              <option value="10">Should any vaccines be required for children?</option>
+              <option value="11">Should performance-enhancing drugs be accepted in sports?</option>
+              <option value="12">Should birth control pills be available over the counter?</option>
+              <option value="13">Can alternative energy effectively replace fossil fuels?</option>
+              <option value="14">Is sexual orientation determined at birth?</option>
+              <option value="15">Should animals be used for scientific or commercial testing?</option>
+              <option value="16">Should prescription drugs be advertised directly to consumers?</option>
+              <option value="17">Should recreational marijuana be legal?</option>
+              <option value="18">Should churches remain tax-exempt?</option>
+              <option value="19">Should gay marriage be legal?</option>
+              <option value="20">Is drinking milk healthy for humans?</option>
+              <option value="21">Is human activity primarily responsible for global climate change?</option>
+              <option value="22">Is a two-state solution an acceptable solution to the Israeli-Palestinian conflict?</option>
+              <option value="23">Should euthanasia or physician-assisted suicide be legal?</option>
+              <option value="24">Does lowering the federal corporate income tax rate create jobs?</option>
+              <option value="25">Should education be free?</option>
+              <option value="26">Do standardized tests improve education?</option>
+              <option value="27">Should more gun control laws be enacted?</option>
+              <option value="28">Should prostitution be legal?</option>
+              <option value="29">Should the government allow illegal immigrants to become citizens?</option>
+              <option value="30">Should adults have the right to carry a concealed handgun?</option>
+              <option value="31">Is obesity a disease?</option>
+              <option value="32">Do electronic voting machines improve the voting process?</option>
+              <option value="34">Are social networking sites good for our society?</option>
+              <option value="35">Do violent video games contribute to youth violence?</option>
+              <option value="36">Is golf a sport?</option>
+              <option value="37">Is cell phone radiation safe?</option>
+              <option value="38">Should marijuana be a medical option?</option>
+              <option value="39">Should the federal minimum wage be increased?</option>
+              <option value="40">Should the death penalty be allowed?</option>
+              <option value="41">Should student loan debt be easier to discharge in bankruptcy?</option>
+              <option value="42">Should fighting be allowed in hockey?</option>
+              <option value="43">Should bottled water be banned?</option>
+              <option value="44">Should election day be a national holiday?</option>
+              <option value="45">Should the penny stay in circulation?</option>
+              <option value="46">Should net neutrality be restored?</option>
+              <option value="47">Is homework beneficial?</option>
+              <option value="48">Should the voting age be lowered?</option>
+              <option value="49">Should body cameras be mandatory for police?</option>
+              <option value="50">Should everyone get a universal basic income?</option>
+            </select>
+         </div>
+      </header>
+      <main>
+         <div class="content retrieval-result">
+            <div class="menubar">
+              <div>
+                <label>System:</label>
+                <select name="run" onchange="updateResults();">
+                  <option value="aramis-argumentativeness-formula-stance-formula">Aramis with arg:formula, stance:formula</option>
+                  <option value="aramis-argumentativeness-formula-stance-neural">Aramis with arg:formula, stance:neural</option>
+                  <option value="aramis-argumentativeness-neural-stance-formula">Aramis with arg:neural, stance: formula</option>
+                  <option value="aramis-argumentativeness-neural-stance-neural">Aramis with arg:neural, stance: formula</option>
+                  <option value="boromir-afinn-clustering">Boromir with AFINN, clustering</option>
+                  <option value="boromir-afinn-ocr">Boromir with AFINN, OCR</option>
+                  <option value="boromir-afinn-ocr-clustering">Boromir with AFINN, OCR, clustering</option>
+                  <option value="boromir-afinn-ocr-clustering-query-processing">Boromir with AFINN, OCR, clustering, query-processing</option>
+                  <option value="boromir-bert-ocr-clustering-query-processing">Boromir with BERT, OCR, clustering, query-preprocessing</option>
+                  <option value="boromir-bert-ocr-query-processing">Boromir with BERT, OCR, query-processing (best)</option>
+                  <option value="jester-with-emotion-detection">Jester with emotion detection</option>
+                  <option value="jester-without-emotion-detection">Jester without emotion detection</option>
+                  <option value="minsc-baseline" selected>Minsc (baseline)</option>
+                </select>
+              </div>
+            </div>
+            <div class="columns">
+               <div class="pro column">
+                  <h2><span class="stance">PRO</span></h2>
+                  <div class="results"></div>
+               </div>
+               <div class="con column">
+                  <h2><span class="stance">CON</span></h2>
+                  <div class="results"></div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="site-foot">
+         <div class="site-foot-content">
+            <div><a href="/api-en.html">API</a> <span class="separator">•</span> <a href="/about-en.html">About</a></div>
+            <div>
+               Copyright&nbsp;©&nbsp;2022&nbsp;<a href="https://webis.de">Webis&nbsp;Group</a> <span class="separator">•</span> <a href="https://github.com/webis-de"><i class="fab fa-github"></i></a><a href="https://twitter.com/webis_de" class="separator"><i class="fab fa-twitter"></i></a><a href="https://www.youtube.com/webis"><i class="fab fa-youtube"></i></a> <span class="separator">•</span> <a href="https://cs.uni-paderborn.de/css/group/group/#wachsmuth">Contact</a> <span class="separator">•</span> <a href="https://webis.de/legal.html">Impressum&nbsp;/&nbsp;Terms&nbsp;/&nbsp;Privacy</a></div>
+         </div>
+      </footer>
+      <script>
+        function addResult(image, rank, score, stance) {
+          const resultElement = document.createElement("a");
+          resultElement.classList.add("result");
+          resultElement.setAttribute("href", image);
+          resultElement.setAttribute("data-lightbox", stance);
+          resultElement.setAttribute("data-rank", rank);
+          resultElement.setAttribute("data-score", score);
+          resultElement.setAttribute("title", stance + " rank " + rank + "; score: " + score);
+
+          const imageElement = document.createElement("img");
+          imageElement.setAttribute("src", image);
+          resultElement.appendChild(imageElement);
+
+          document.querySelector("." + stance.toLowerCase() + " .results").appendChild(resultElement);
+        }
+
+        function addRunLine(runLine, topic) {
+          if (runLine === "") { return true; }
+          const parts = runLine.split(" ");
+          if (parts[0] !== topic) { return true; }
+          const stance = parts[1];
+          const imageId = parts[2];
+          const rank = parts[3];
+          const score = parts[4];
+          const name = parts[5];
+          const image = "https://files.webis.de/corpora/corpora-webis/corpus-touche-image-search-22/images/" + imageId.substr(0, 3) + "/" + imageId + ".webp";
+          addResult(image, rank, score, stance);
+        }
+
+        function addRun(runText) {
+          for (const resultsElement of Array.from(document.querySelectorAll(".results"))) {
+            resultsElement.innerHTML = "";
+          }
+          const topic = document.querySelector("[name='topic']").value;
+          if (topic !== "nothing") {
+            const runLines = runText.split("\n");
+            for (let lineNumber = 1; lineNumber <= runLines.length; ++lineNumber) {
+              addRunLine(runLines[lineNumber - 1], topic);
+            }
+          }
+        }
+
+        function updateResults() {
+          const runName = document.querySelector("[name='run']").value;
+          const url = "data/run-" + runName + ".txt";
+          fetch(url)
+            .then(response => response.text())
+            .then(runText => addRun(runText)) 
+            .catch(error => {
+              console.log(error);
+            });
+        }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,96 @@
+/******************************************************************************
+  site-head
+******************************************************************************/
+
+.site-head {
+  padding: calc(var(--spacing) * 2);
+  background-color: var(--c-grey-light);
+}
+
+.site-head > * {
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/******************************************************************************
+  main
+******************************************************************************/
+
+main {
+  flex-grow: 1; /* sticky footer */
+  margin-right: var(--spacing);
+  margin-left: var(--spacing);
+}
+
+main.vertical-fill {
+  display: flex;
+}
+
+main > * {
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  flex-grow: 1;
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    margin-right: calc( var(--spacing) * 2);
+    margin-left: calc( var(--spacing) * 2);
+  }
+}
+
+/******************************************************************************
+  site-foot
+******************************************************************************/
+
+.site-foot {
+  margin-top: calc( var(--spacing) * 4 );
+  padding-top: var(--spacing);
+  padding-bottom: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+  background-color: var(--c-grey-light);
+  font-size: calc( 13px * 0.875 );
+  line-height: 19.35px;
+  font-family: "Product Sans", "Noto Sans", "Verdana", sans-serif;
+}
+
+.site-foot > * {
+  max-width: var(--page-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(102, 102, 102);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.site-foot-content > * {
+	margin-top: 15px;
+}
+.site-foot-content > *:not(:last-child) {
+	margin-right: var(--column-spacing);
+}
+
+.site-foot-content a {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+.site-foot-content a:hover {
+  text-decoration: underline;
+}
+
+.site-foot-content .separator {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body { /* sticky footer */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+

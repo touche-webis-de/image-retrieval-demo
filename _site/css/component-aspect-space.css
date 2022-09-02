@@ -1,0 +1,72 @@
+#aspect-space {
+  width: 100%;
+}
+
+#aspect-space svg {
+  width: 100%;
+  height: auto;
+}
+
+#aspect-space svg .argument-points circle.pro {
+  fill: var(--c-pro);
+}
+#aspect-space svg .argument-points circle.pro.unselected {
+  fill: lightgray;
+}
+#aspect-space svg .argument-points circle.con {
+  fill: var(--c-con);
+}
+#aspect-space svg .argument-points circle.con.unselected {
+  fill: darkgray;
+}
+#aspect-space svg .argument-points circle.filtered {
+  display: none;
+}
+
+#aspect-space svg .coordinate-system .border {
+  fill: none;
+  stroke: lightgray;
+  stroke-width: 0.5px;
+}
+#aspect-space svg .coordinate-system .dimension rect {
+  fill: gray;
+  cursor: pointer;
+}
+#aspect-space svg .coordinate-system .dimension rect.selected {
+  fill: black;
+}
+#aspect-space svg .coordinate-system .dimension text {
+  text-anchor: middle;
+  cursor: pointer;
+}
+#aspect-space svg .coordinate-system .dimension text.selected {
+  font-weight: bold;
+}
+#aspect-space svg .coordinate-system .dimension.other rect,
+#aspect-space svg .coordinate-system .dimension.other text {
+  cursor: not-allowed;
+}
+
+#aspect-space svg path.topic_indicator {
+  stroke-width: 1px;
+  stroke: black;
+  pointer-events: none;
+}
+
+#aspect-space svg .lasso path {
+  stroke: rgb(80,80,80);
+  stroke-width: 1px;
+}
+#aspect-space svg .lasso .drawn {
+  fill-opacity: .05;
+}
+#aspect-space svg .lasso .loop_close {
+  fill: none;
+  stroke-dasharray: 4,4;
+}
+#aspect-space svg .lasso .origin {
+  fill: none;
+}
+#aspect-space .lasso-area {
+  opacity: 0;
+}

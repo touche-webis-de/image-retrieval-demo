@@ -1,0 +1,61 @@
+.dropdown > summary {
+  list-style: none;
+}
+
+.dropdown > summary::before {
+  display: none;
+  content: '';
+  padding-right: 0;
+  font-size: inherit;
+}
+
+.dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown .dropdown-button {
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.dropdown .down-triangle {
+  display: inline-block;
+  vertical-align: middle;
+  border-bottom: 0 solid transparent;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+
+.dropdown[open] > summary::before { /* Makes the full viewport the click area of the summary element, thus enabling to click outside the component to close the overlay. */
+  content: ' ';
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  width: 100%;
+  padding: var(--spacing);
+  margin-top: calc( var(--spacing) / 2 );
+  border: 1px solid var(--c-grey);
+  border-radius: 4px;
+  color: var(--c-text);
+  background-color: white;
+  box-shadow: 0 5px 15px var(--c-grey);
+}
+
+.dropdown .dropdown-button:hover, .dropdown[open] .dropdown-button {
+  color: var(--c-action);
+}
